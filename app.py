@@ -19,7 +19,7 @@ from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score, e
 
 def load_dataset():
     # Load your weather dataset from a CSV file
-    df = pd.read_csv('C:/Users/valer/Documents/Machine Learning/Practicas/Bases de datos/DATASET E-COMERCE/Sales Transaction v.4a.csv')
+    df = pd.read_csv('Sales_Transaction.csv')
     df = df[df['Quantity'] > 0]
     df['Month'] = pd.to_datetime(df['Date']).dt.month
     df['DayOfWeek'] = pd.to_datetime(df['Date']).dt.dayofweek
