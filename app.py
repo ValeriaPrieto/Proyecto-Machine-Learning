@@ -46,7 +46,7 @@ def load_dataset():
 
 def get_model(algorithm):
     if algorithm == 'Linear Regression':
-        model = LinearRegression()
+        model = LinearRegression(copy_X= True, fit_intercept= True)
     elif algorithm == 'Support Vector Regressor':
         model = SVR(C= 1, epsilon= 0.0)
     elif algorithm == 'Random Forrest':
